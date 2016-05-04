@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="393.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.osdis.datebase.FXMLController">
+   <children>
+      <TabPane layoutX="-66.0" prefHeight="371.0" prefWidth="500.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="22.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <tabs>
+          <Tab text="Рабочий стол">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <SplitPane dividerPositions="0.5903614457831325" layoutY="6.0" prefHeight="271.0" prefWidth="385.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <items>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                 <children>
+                                    <TextArea fx:id="textAreaOne" layoutX="6.0" layoutY="6.0" prefHeight="337.0" prefWidth="252.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                 </children>
+                              </AnchorPane>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                 <children>
+                                    <ChoiceBox fx:id="choiceBox" layoutX="24.0" layoutY="31.0" prefHeight="25.0" prefWidth="154.0" />
+                                    <Label layoutX="58.0" layoutY="6.0" text="Выбор таблицы" />
+                                    <Button fx:id="selectTab" layoutX="24.0" layoutY="75.0" mnemonicParsing="false" onAction="#drawDB" prefHeight="25.0" prefWidth="154.0" text="Подтвердить" />
+                                 </children></AnchorPane>
+                          </items>
+                        </SplitPane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Настройки">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <PasswordField fx:id="password" layoutX="108.0" layoutY="49.0" prefHeight="25.0" prefWidth="159.0" promptText="enter password" text="1234" />
+                        <Label layoutX="32.0" layoutY="18.0" text="Login" />
+                        <Label layoutX="32.0" layoutY="53.0" text="Password" AnchorPane.topAnchor="53.0" />
+                        <Label layoutX="33.0" layoutY="91.0" prefHeight="17.0" prefWidth="51.0" text="URL " />
+                        <TextField fx:id="login" layoutX="108.0" layoutY="14.0" prefHeight="25.0" prefWidth="159.0" promptText="enter login" text="root" />
+                        <TextField fx:id="nameDB" layoutX="108.0" layoutY="87.0" prefHeight="25.0" prefWidth="159.0" promptText="enter URL Date Base" text="jdbc:mysql://localhost:3306/mydatebase" />
+                        <Button fx:id="bConnection" layoutX="309.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleButtonAction" text="Подключение" />
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+      <Label fx:id="console" layoutX="14.0" layoutY="371.0" prefHeight="17.0" prefWidth="79.0" text="Console:" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="15.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="consoleText" layoutX="80.0" layoutY="371.0" prefHeight="17.0" prefWidth="393.0" text="Добро пожаловать в DateBaseWatcher v0.1.1" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="100.0" />
+   </children>
+</AnchorPane>
